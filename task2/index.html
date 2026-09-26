@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 2 - Component Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="library-container">
+    <section class="component-section">
+      <h2>1. Navigation Bar</h2>
+      <nav class="navbar">
+        <div class="logo">BrandLogo</div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="nav-buttons">
+          <button class="btn btn-outline">Log In</button>
+          <button class="btn btn-primary">Sign Up</button>
+        </div>
+      </nav>
+    </section>
+
+    <section class="component-section">
+      <h2>2. Card Row</h2>
+      <div class="card-row">
+        <div class="card">
+          <h3 class="card-title">Basic</h3>
+          <p class="card-desc">Short description for the basic card.</p>
+          <button class="btn btn-primary card-btn">Choose</button>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Standard</h3>
+          <p class="card-desc">A slightly longer description for the standard card that takes up multiple lines to test the layout.</p>
+          <button class="btn btn-primary card-btn">Choose</button>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Premium</h3>
+          <p class="card-desc">This is the premium card description. It has to survive content it was not designed for. It is the longest text here.</p>
+          <button class="btn btn-primary card-btn">Choose</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="component-section">
+      <h2>3. Pagination Bar</h2>
+      <div class="pagination-bar">
+        <div class="pagination-spacer"></div>
+        <div class="pagination-controls">
+          <button class="btn btn-icon">&laquo;</button>
+          <div class="page-numbers">
+            <span class="page active">1</span>
+            <span class="page">2</span>
+            <span class="page">3</span>
+            <span class="page">4</span>
+          </div>
+          <button class="btn btn-icon">&raquo;</button>
+        </div>
+        <div class="pagination-results">
+          Showing 1-10 of 42
+        </div>
+      </div>
+    </section>
+
+    <section class="component-section">
+      <h2>4. Comment Block</h2>
+      <div class="comment-block">
+        <img class="avatar" src="https://ui-avatars.com/api/?name=User&background=random" alt="Avatar">
+        <div class="comment-content">
+          <h4 class="comment-author">John Doe <span class="comment-date">2 hours ago</span></h4>
+          <p class="comment-text">This is a comment that will wrap beside the avatar. Even if it gets very long, it should never slide under the avatar image because we are using Flexbox properly. The avatar retains its size and acts as a separate flex item.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="component-section">
+      <h2>5. Pricing Table</h2>
+      <div class="pricing-table">
+        <div class="pricing-plan">
+          <h3>Starter</h3>
+          <p class="price">$10<span>/mo</span></p>
+          <ul class="features">
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+          </ul>
+          <button class="btn btn-outline">Buy Now</button>
+        </div>
+        <div class="pricing-plan recommended">
+          <div class="recommended-badge">Recommended</div>
+          <h3>Pro</h3>
+          <p class="price">$25<span>/mo</span></p>
+          <ul class="features">
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+            <li>Feature 3</li>
+            <li>Feature 4</li>
+          </ul>
+          <button class="btn btn-primary">Buy Now</button>
+        </div>
+        <div class="pricing-plan">
+          <h3>Enterprise</h3>
+          <p class="price">$50<span>/mo</span></p>
+          <ul class="features">
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+            <li>Feature 3</li>
+          </ul>
+          <button class="btn btn-outline">Buy Now</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

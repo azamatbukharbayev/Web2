@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3 - Three Layouts, One Markup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <h1>Articles</h1>
+      <div class="controls">
+        <button onclick="setLayout('grid-mode')">Grid Mode</button>
+        <button onclick="setLayout('list-mode')">List Mode</button>
+        <button onclick="setLayout('magazine-mode')">Magazine Mode</button>
+      </div>
+    </header>
+
+    <div id="content-container" class="container grid-mode">
+      <!-- Item 1 (Lead in Magazine mode) -->
+      <article class="item">
+        <img src="https://picsum.photos/seed/1/600/400" alt="Thumbnail" class="item-img">
+        <div class="item-content">
+          <h3 class="item-title">The Future of Web Development</h3>
+          <p class="item-desc">Exploring how CSS Grid and Flexbox are revolutionizing modern web design, making complex layouts achievable without fixed constraints or media queries.</p>
+        </div>
+        <div class="item-date">Sep 21, 2026</div>
+      </article>
+
+      <!-- Item 2 -->
+      <article class="item">
+        <img src="https://picsum.photos/seed/2/600/400" alt="Thumbnail" class="item-img">
+        <div class="item-content">
+          <h3 class="item-title">Understanding Flexbox</h3>
+          <p class="item-desc">A deep dive into 1D layouts.</p>
+        </div>
+        <div class="item-date">Sep 20, 2026</div>
+      </article>
+
+      <!-- Item 3 -->
+      <article class="item">
+        <img src="https://picsum.photos/seed/3/600/400" alt="Thumbnail" class="item-img">
+        <div class="item-content">
+          <h3 class="item-title">Mastering CSS Grid</h3>
+          <p class="item-desc">Grid enables 2D layouts natively in the browser. It allows precise control over rows and columns.</p>
+        </div>
+        <div class="item-date">Sep 19, 2026</div>
+      </article>
+
+      <!-- Item 4 -->
+      <article class="item">
+        <img src="https://picsum.photos/seed/4/600/400" alt="Thumbnail" class="item-img">
+        <div class="item-content">
+          <h3 class="item-title">Responsive Design</h3>
+          <p class="item-desc">Scaling flawlessly from mobile to desktop screens.</p>
+        </div>
+        <div class="item-date">Sep 18, 2026</div>
+      </article>
+
+      <!-- Item 5 -->
+      <article class="item">
+        <img src="https://picsum.photos/seed/5/600/400" alt="Thumbnail" class="item-img">
+        <div class="item-content">
+          <h3 class="item-title">Modern CSS Features</h3>
+          <p class="item-desc">What's new in the world of cascading style sheets.</p>
+        </div>
+        <div class="item-date">Sep 17, 2026</div>
+      </article>
+
+      <!-- Item 6 -->
+      <article class="item">
+        <img src="https://picsum.photos/seed/6/600/400" alt="Thumbnail" class="item-img">
+        <div class="item-content">
+          <h3 class="item-title">UI Component Libraries</h3>
+          <p class="item-desc">Building reusable patterns for web apps. We use Flexbox inside items to keep them flexible and adaptable to different content lengths.</p>
+        </div>
+        <div class="item-date">Sep 16, 2026</div>
+      </article>
+
+       <!-- Item 7 -->
+       <article class="item">
+        <img src="https://picsum.photos/seed/7/600/400" alt="Thumbnail" class="item-img">
+        <div class="item-content">
+          <h3 class="item-title">Performance Optimization</h3>
+          <p class="item-desc">Keeping layouts fast and Jank-free.</p>
+        </div>
+        <div class="item-date">Sep 15, 2026</div>
+      </article>
+
+      <!-- Item 8 -->
+      <article class="item">
+        <img src="https://picsum.photos/seed/8/600/400" alt="Thumbnail" class="item-img">
+        <div class="item-content">
+          <h3 class="item-title">Accessibility in Layouts</h3>
+          <p class="item-desc">Ensuring everyone can use your site.</p>
+        </div>
+        <div class="item-date">Sep 14, 2026</div>
+      </article>
+
+       <!-- Item 9 -->
+       <article class="item">
+        <img src="https://picsum.photos/seed/9/600/400" alt="Thumbnail" class="item-img">
+        <div class="item-content">
+          <h3 class="item-title">No Media Queries?</h3>
+          <p class="item-desc">Techniques to create responsive designs dynamically.</p>
+        </div>
+        <div class="item-date">Sep 13, 2026</div>
+      </article>
+
+       <!-- Item 10 -->
+       <article class="item">
+        <img src="https://picsum.photos/seed/10/600/400" alt="Thumbnail" class="item-img">
+        <div class="item-content">
+          <h3 class="item-title">Visual Hierarchies</h3>
+          <p class="item-desc">Using size and placement to draw attention to lead stories.</p>
+        </div>
+        <div class="item-date">Sep 12, 2026</div>
+      </article>
+      
+       <!-- Item 11 -->
+       <article class="item">
+        <img src="https://picsum.photos/seed/11/600/400" alt="Thumbnail" class="item-img">
+        <div class="item-content">
+          <h3 class="item-title">Fluid Typography</h3>
+          <p class="item-desc">Text that scales nicely.</p>
+        </div>
+        <div class="item-date">Sep 11, 2026</div>
+      </article>
+
+       <!-- Item 12 -->
+       <article class="item">
+        <img src="https://picsum.photos/seed/12/600/400" alt="Thumbnail" class="item-img">
+        <div class="item-content">
+          <h3 class="item-title">Conclusion</h3>
+          <p class="item-desc">Wrapping up our CSS journey.</p>
+        </div>
+        <div class="item-date">Sep 10, 2026</div>
+      </article>
+    </div>
+  </div>
+
+  <script>
+    function setLayout(modeClass) {
+      const container = document.getElementById('content-container');
+      container.className = 'container ' + modeClass;
+    }
+  </script>
+</body>
+</html>

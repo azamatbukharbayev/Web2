@@ -1,0 +1,309 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.library-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #444;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-primary {
+  background-color: #0066cc;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #0052a3;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #0066cc;
+  border: 1px solid #0066cc;
+}
+.btn-outline:hover {
+  background-color: #e6f0fa;
+}
+
+.btn-icon {
+  background-color: transparent;
+  color: #555;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.btn-icon:hover {
+  background-color: #eee;
+}
+
+/* 1. Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0066cc;
+  margin-right: 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+}
+.nav-links a:hover {
+  color: #0066cc;
+}
+
+.nav-buttons {
+  margin-left: auto; /* Pushes the buttons to the right edge */
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* 2. Row of cards */
+.card-row {
+  display: flex;
+  gap: 1.5rem;
+  align-items: stretch; /* Make cards equal height */
+}
+
+.card {
+  flex: 1;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column; /* Allows pushing button to bottom */
+}
+
+.card-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+}
+
+.card-desc {
+  margin: 0 0 1.5rem 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+.card-btn {
+  margin-top: auto; /* Pushes button to the bottom */
+}
+
+/* 3. Pagination Bar */
+.pagination-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  flex-wrap: wrap; /* Allows wrapping on narrow screens */
+  gap: 1rem;
+}
+
+.pagination-spacer {
+  flex: 1;
+  min-width: 150px;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.page-numbers {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #555;
+  font-weight: 600;
+}
+.page:hover {
+  background-color: #eee;
+}
+.page.active {
+  background-color: #0066cc;
+  color: white;
+}
+
+.pagination-results {
+  flex: 1;
+  text-align: right;
+  color: #666;
+  font-size: 0.9rem;
+  min-width: 150px;
+}
+
+/* 4. Comment Block */
+.comment-block {
+  display: flex;
+  gap: 1rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  flex-shrink: 0; /* Prevents avatar from shrinking */
+}
+
+.comment-content {
+  flex: 1; /* Takes up remaining space */
+}
+
+.comment-author {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.comment-date {
+  font-weight: normal;
+  color: #888;
+  font-size: 0.85rem;
+  margin-left: 0.5rem;
+}
+
+.comment-text {
+  margin: 0;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* 5. Pricing Table */
+.pricing-table {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center; /* Aligns items in the middle vertically so recommended can be taller */
+  flex-wrap: wrap;
+}
+
+.pricing-plan {
+  flex: 1;
+  background-color: white;
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  min-width: 250px;
+}
+
+.pricing-plan.recommended {
+  padding: 3rem 1.5rem; /* Taller due to larger padding, no fixed height */
+  border: 2px solid #0066cc;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0,102,204,0.15);
+}
+
+.recommended-badge {
+  position: absolute;
+  top: 0;
+  background-color: #0066cc;
+  color: white;
+  padding: 0.25rem 1rem;
+  border-radius: 0 0 8px 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.pricing-plan h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 1.5rem 0;
+}
+.price span {
+  font-size: 1rem;
+  color: #666;
+  font-weight: normal;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  width: 100%;
+}
+
+.features li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  color: #555;
+}
+.features li:last-child {
+  border-bottom: none;
+}
+
+.pricing-plan .btn {
+  width: 100%;
+}
